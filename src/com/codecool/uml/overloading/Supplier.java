@@ -1,9 +1,12 @@
 package com.codecool.uml.overloading;
 
+import java.util.concurrent.atomic.AtomicInteger;
+
 public class Supplier {
-    private int id;
+    private int id = count.incrementAndGet();
     private String name;
     private String description;
+    private static final AtomicInteger count = new AtomicInteger(0);
 
 
     public Supplier(){}

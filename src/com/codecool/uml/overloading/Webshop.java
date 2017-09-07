@@ -4,7 +4,10 @@ import com.sun.org.apache.xpath.internal.SourceTree;
 
 import java.util.Currency;
 
+
+
 public class Webshop {
+    private final Currency FORINT = Currency.getInstance("HUF");
     private Product theProduct;
     private ProductCategory theProductCategory;
     private Supplier theSupplier;
@@ -45,8 +48,17 @@ public class Webshop {
         Webshop theWebshop = new Webshop(theproduct,theProductCategory,theSupplier,theFeaturedProductCategory);
 
 
+        Supplier theSupplier2 = new Supplier("BMW","BAYERICHE MOTOR WERKE");
+        ProductCategory theProductCategory2 = new ProductCategory("CARS", "VECHICLE", "ALL PRODUCTS MADE ITH PROUD");
+        FeaturedProductCategory theFeaturedProductCategory2 = new FeaturedProductCategory();
+        Product theproduct2 = new Product("335D", 100500);
+
+        Webshop theWebshop2 = new Webshop(theproduct2,theProductCategory2,theSupplier2,theFeaturedProductCategory2);
+
+
         System.out.println(theWebshop.getTheProduct().toString());
         System.out.println(theWebshop.getTheSupplier().toString());
+        System.out.println(theWebshop2.getTheProduct().toString());
     }
 
 
